@@ -1,0 +1,208 @@
+:root {
+    --primary-color: hsl(172, 67%, 45%);
+    --darkest-green: hsl(183, 100%, 15%);
+    --white: hsl(0, 0%, 100%);
+    --light-grayish-cyan: hsl(185, 41%, 84%);
+    --lightest-grayish-cyan: hsl(189, 41%, 97%);
+    --section-border-radius: 14px;
+    --tip-button-width: 94px;
+    --tip-button-font-size: 18px;
+    --input-font-size: 24px;
+}
+
+* {
+    font-family: "Space Mono";
+}
+
+body {
+    background-color: var(--light-grayish-cyan);
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+button:disabled {
+    opacity: 0.15;
+    cursor: not-allowed;
+}
+
+.container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.calc {
+    background-color: var(--white);
+    -webkit-border-radius: var(--section-border-radius);
+    -moz-border-radius: var(--section-border-radius);
+    border-radius: var(--section-border-radius);
+    padding: 20px;
+    display: flex;
+    gap: 40px;
+    height: 350px;
+    width: 720px;
+}
+
+.calc-keys {
+    flex: 50%;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.input-labels {
+    display: flex;
+    justify-content: space-between;
+}
+
+.input-labels .error {
+    color: red;
+    display: none;
+}
+
+.calc-keys label {
+    color: var(--darkest-green);
+    font-size: 12px;
+    padding-left: 2px;
+}
+
+.calc-keys .tip-select .keys {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+button.tip-key {
+    background-color: var(--darkest-green);
+    color: var(--white);
+    border-style: none;
+    border-radius: 4px;
+    height: 34px;
+    width: var(--tip-button-width);
+    font-size: var(--tip-button-font-size);
+    font-weight: bold;
+}
+
+button.tip-key.selected {
+    background-color: var(--primary-color);
+    color: var(--darkest-green);
+}
+
+.manual-input {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    text-align: right;
+    font-weight: bold;
+    font-size: var(--input-font-size);
+    color: var(--darkest-green);
+    height: 36px;
+    padding: 7px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.manual-input:focus-visible {
+    outline: none !important;
+    border: 2px solid var(--primary-color);
+    border-radius: 4px;
+}
+
+.manual-input::placeholder {
+    opacity: 0.6;
+    color: var(--darkest-green);
+    font-size: var(--input-font-size);
+}
+
+.manual-input#bill {
+    background: var(--lightest-grayish-cyan) url(images/icon-dollar.svg) no-repeat scroll 7px 7px;
+    width: 100%;
+}
+
+.manual-input#number-of-people {
+    background: var(--lightest-grayish-cyan) url(images/icon-person.svg) no-repeat scroll 7px 7px;
+    width: 100%;
+}
+
+.manual-input#number-of-people.error {
+    outline: none !important;
+    border: 2px solid red;
+    border-radius: 4px;
+}
+
+.manual-input#custom {
+    height: 34px;
+    width: var(--tip-button-width);
+    background-color: var(--lightest-grayish-cyan);
+    font-size: 20px;
+}
+
+.manual-input#custom::placeholder {
+    font-size: 20px;
+}
+
+.calc-display {
+    flex: 50%;
+    background-color: var(--darkest-green);
+    -webkit-border-radius: var(--section-border-radius);
+    -moz-border-radius: var(--section-border-radius);
+    border-radius: var(--section-border-radius);
+    padding: 36px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result-row .title {
+    color: var(--white);
+    font-size: 12px;
+}
+
+.result-row .subtitle {
+    color: hsl(186, 14%, 43%);
+    font-size: 10px;
+}
+
+.result-row .result {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: bold;
+}
+
+button.reset {
+    background-color: var(--primary-color);
+    color: var(--darkest-green);
+    border-style: none;
+    border-radius: 4px;
+    height: 36px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

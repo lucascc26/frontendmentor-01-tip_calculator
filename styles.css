@@ -6,7 +6,10 @@
     --lightest-grayish-cyan: hsl(189, 41%, 97%);
     --section-border-radius: 14px;
     --tip-button-width: 94px;
+    --tip-button-height: 34px;
     --tip-button-font-size: 18px;
+    --mobile-tip-button-width: 134px;
+    --mobile-tip-button-height: 40px;
     --input-font-size: 24px;
 }
 
@@ -35,6 +38,10 @@ input::-webkit-inner-spin-button {
 
 input[type="number"] {
     -moz-appearance: textfield;
+}
+
+.visible-mobile {
+    display: none;
 }
 
 .container {
@@ -93,7 +100,7 @@ button.tip-key {
     color: var(--white);
     border-style: none;
     border-radius: 4px;
-    height: 34px;
+    height: var(--tip-button-height);
     width: var(--tip-button-width);
     font-size: var(--tip-button-font-size);
     font-weight: bold;
@@ -152,7 +159,7 @@ button.tip-key.selected {
 }
 
 .manual-input#custom {
-    height: 34px;
+    height: var(--tip-button-height);
     width: var(--tip-button-width);
     background-color: var(--lightest-grayish-cyan);
     font-size: 20px;
@@ -221,4 +228,33 @@ button.reset {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media screen and (max-width: 765px) {
+    .visible-mobile {
+        display: block;
+    }
+    .calc {
+        flex-direction: column;
+        height: 530px;
+        width: 280px;
+    }
+    button.tip-key {
+        height: var(--mobile-tip-button-height);
+        width: var(--mobile-tip-button-width);
+    }
+    .manual-input#custom {
+        height: var(--mobile-tip-button-height);
+        width: var(--mobile-tip-button-width);
+    }
+    .calc-display {
+        flex: 0;
+        padding: 20px;
+    }
+    .result-row .result {
+        font-size: 30px;
+    }
+    button.reset {
+        margin-top: 20px;
+    }
 }

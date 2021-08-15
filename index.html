@@ -9,6 +9,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
     <link rel="stylesheet" href="./styles.css" />
 
+    <script type="text/javascript" src="./TipCalculator.js" async></script>
     <script type="text/javascript" src="./script.js" async></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
@@ -21,27 +22,27 @@
                 <div class="bill">
                     <div class="input-labels">
                         <label for="bill">Bill</label>
-                        <label class="error bill-error">Error</label>
+                        <label class="error bill-error" data-bill-error>Error</label>
                     </div>
-                    <input class="manual-input" type="text" name="bill" id="bill" placeholder="0">
+                    <input class="manual-input" type="number" min="0" step="any" name="bill" id="bill" placeholder="0" data-bill>
                 </div>
                 <div class="tip-select">
                     <label for="tip-key">Select Tip %</label>
                     <div class="keys">
-                        <button class="tip-key">5%</button>
-                        <button class="tip-key">10%</button>
-                        <button class="tip-key">15%</button>
-                        <button class="tip-key">25%</button>
-                        <button class="tip-key">50%</button>
-                        <input class="manual-input tip-key-custom" type="text" name="custom" id="custom" placeholder="Custom">
+                        <button class="tip-key" value="5" data-percentage-button>5%</button>
+                        <button class="tip-key" value="10" data-percentage-button>10%</button>
+                        <button class="tip-key" value="15" data-percentage-button>15%</button>
+                        <button class="tip-key" value="25" data-percentage-button>25%</button>
+                        <button class="tip-key" value="50" data-percentage-button>50%</button>
+                        <input class="manual-input tip-key-custom" type="number" min="0" name="custom" id="custom" placeholder="Custom" data-custom-percentage>
                     </div>
                 </div>
                 <div class="number-of-people">
                     <div class="input-labels">
                         <label for="input-name number-of-people">Number of People</label>
-                        <label class="error number-of-people-error">Error</label>
+                        <label class="error number-of-people-error" data-number-of-people-error>Error</label>
                     </div>
-                    <input class="manual-input" type="text" name="number-of-people" id="number-of-people" placeholder="0">
+                    <input class="manual-input" type="number" min="0" name="number-of-people" id="number-of-people" placeholder="0" data-number-of-people>
                 </div>
             </div>
 
@@ -52,17 +53,17 @@
                             <div class="title">Tip Amount</div>
                             <div class="subtitle">/ person</div>
                         </div>
-                        <div class="result tip-amount-result">$0.00</div>
+                        <div class="result tip-amount-result" data-tip-by-person>$0.00</div>
                     </div>
                     <div class="result-row">
                         <div>
                             <div class="title">Total</div>
                             <div class="subtitle">/ person</div>
                         </div>
-                        <div class="result total-result">$0.00</div>
+                        <div class="result total-result" data-total-by-person>$0.00</div>
                     </div>
                 </div>
-                <button class="reset" disabled>Reset</button>
+                <button class="reset" disabled data-reset>Reset</button>
             </div>
         </div>
 

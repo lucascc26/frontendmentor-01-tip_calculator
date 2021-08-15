@@ -33,7 +33,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/lucascc26/frontendmentor-01-tip_calculator)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [Vercel](https://frontendmentor-01-tip-calculator.vercel.app/)
 
 ## My process
 

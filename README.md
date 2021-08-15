@@ -49,7 +49,7 @@ Users should be able to:
 
 - [CSS Flexbox Guide](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) - Great guide for CSS Flexbox. I'd recommend it to anyone learning this concept.
 - [Build A Calculator With JavaScript Tutorial](https://www.youtube.com/watch?v=j59qQ7YWLxw) - Tutorial to create a calculator with Javascript by Web Dev Simplified.
-- [CSS Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/) Excellent guide for CSS Media Queries.
+- [CSS Media Queries](https://css-tricks.com/a-complete-guide-to-css-media-queries/) - Excellent guide for CSS Media Queries.
 
 ## Author
 
